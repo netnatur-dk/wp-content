@@ -1,1 +1,329 @@
-testing
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetNatur ID | Portal Alam Liar & Berburu</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for Magazine Look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            light: '#2d5a27',
+                            DEFAULT: '#1b4318', /* Forest Green */
+                            dark: '#0f2910',
+                        },
+                        earth: {
+                            DEFAULT: '#8B5A2B', /* Brown */
+                            dark: '#654321',
+                        },
+                        stone: {
+                            light: '#f4f4f5',
+                            DEFAULT: '#d4d4d8',
+                            dark: '#3f3f46', /* Dark Gray */
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Merriweather', 'serif'],
+                        body: ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-light text-stone-dark font-body antialiased flex flex-col min-h-screen">
+
+    <!-- Top Bar (Optional for Magazine Feel) -->
+    <div class="bg-forest text-white text-xs py-1 px-4 flex justify-between items-center hidden sm:flex">
+        <span>Kamis, 29 Oktober 2026 | Dalung, Bali</span>
+        <div class="flex space-x-4">
+            <a href="#" class="hover:text-earth transition">Tentang Kami</a>
+            <a href="#" class="hover:text-earth transition">Iklan</a>
+            <a href="#" class="hover:text-earth transition">Login</a>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 md:py-6">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="text-3xl md:text-4xl font-heading font-black text-forest tracking-tight">
+                    NetNatur<span class="text-earth">ID</span>
+                </a>
+
+                <!-- Mobile Menu Button (Hamburger) -->
+                <button class="md:hidden text-forest hover:text-earth focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-6 lg:space-x-8 font-semibold text-sm lg:text-base uppercase tracking-wider text-stone-dark">
+                    <a href="#" class="text-forest border-b-2 border-forest pb-1">Beranda</a>
+                    <a href="#" class="hover:text-forest transition hover:border-b-2 border-forest pb-1">Alam</a>
+                    <a href="#" class="hover:text-forest transition hover:border-b-2 border-forest pb-1">Berburu</a>
+                    <a href="#" class="hover:text-forest transition hover:border-b-2 border-forest pb-1">Peralatan</a>
+                    <a href="#" class="hover:text-forest transition hover:border-b-2 border-forest pb-1">Opini</a>
+                    <a href="#" class="hover:text-forest transition hover:border-b-2 border-forest pb-1">Kontak</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        
+        <!-- Hero Section (Featured Article) -->
+        <section class="mb-12 rounded-xl overflow-hidden shadow-lg relative h-[400px] md:h-[500px] group cursor-pointer">
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
+                 style="background-image: url('https://placehold.co/1200x600/1b4318/FFFFFF?text=Alam+Liar+Indonesia');">
+            </div>
+            <!-- Gradient Overlay for Text Readability -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+            
+            <!-- Hero Content -->
+            <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-12 text-white">
+                <span class="bg-earth text-white text-xs font-bold uppercase tracking-widest py-1 px-3 w-max rounded-sm mb-4">Eksklusif</span>
+                <h1 class="text-3xl md:text-5xl font-heading font-bold mb-4 leading-tight group-hover:text-stone-200 transition">
+                    Musim Berburu Dimulai: Persiapan Menghadapi Alam Liar Bali Barat
+                </h1>
+                <p class="hidden md:block text-lg mb-6 max-w-3xl font-light text-gray-200">
+                    Panduan lengkap untuk memastikan peralatan, etika, dan kesiapan mental Anda berada di kondisi puncak sebelum melangkah ke area perburuan yang diizinkan.
+                </p>
+                <div>
+                    <button class="bg-forest hover:bg-forest-light text-white font-bold py-3 px-6 rounded transition duration-300 shadow-md">
+                        Baca Selengkapnya
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Layout (2 Columns) -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            
+            <!-- Left Column: Recent News -->
+            <div class="lg:col-span-2">
+                <div class="border-b-4 border-forest mb-6 pb-2 flex justify-between items-end">
+                    <h2 class="text-2xl font-heading font-bold text-forest">Berita Terbaru</h2>
+                    <a href="#" class="text-sm font-semibold text-earth hover:underline">Lihat Semua ></a>
+                </div>
+
+                <!-- Articles Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    
+                    <!-- Article Card 1 -->
+                    <article class="flex flex-col bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                        <a href="#" class="relative h-48 overflow-hidden block">
+                            <img src="https://placehold.co/600x400/8B5A2B/FFFFFF?text=Konservasi" alt="Konservasi" class="object-cover w-full h-full hover:scale-105 transition duration-500">
+                        </a>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <span class="text-earth text-xs font-bold uppercase tracking-wide mb-2">Konservasi</span>
+                            <h3 class="text-xl font-heading font-bold mb-2 leading-snug">
+                                <a href="#" class="hover:text-forest transition">Menjaga Ekosistem Hutan: Peran Pemburu Konservasi</a>
+                            </h3>
+                            <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-3">
+                                Bagaimana aktivitas berburu yang tergulasi dengan baik dapat membantu menyeimbangkan populasi satwa liar dan mencegah kerusakan habitat alami.
+                            </p>
+                            <span class="text-xs text-gray-500 flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                28 Oktober 2026
+                            </span>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 2 -->
+                    <article class="flex flex-col bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                        <a href="#" class="relative h-48 overflow-hidden block">
+                            <img src="https://placehold.co/600x400/3f3f46/FFFFFF?text=Review+Alat" alt="Peralatan" class="object-cover w-full h-full hover:scale-105 transition duration-500">
+                        </a>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <span class="text-earth text-xs font-bold uppercase tracking-wide mb-2">Peralatan</span>
+                            <h3 class="text-xl font-heading font-bold mb-2 leading-snug">
+                                <a href="#" class="hover:text-forest transition">Review Komprehensif: Teropong Jarak Jauh Terbaik 2026</a>
+                            </h3>
+                            <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-3">
+                                Menguji 5 merek teropong terkemuka di kondisi cahaya rendah. Cari tahu mana yang pantas menemani petualangan Anda berikutnya.
+                            </p>
+                            <span class="text-xs text-gray-500 flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                27 Oktober 2026
+                            </span>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 3 -->
+                    <article class="flex flex-col bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                        <a href="#" class="relative h-48 overflow-hidden block">
+                            <img src="https://placehold.co/600x400/1b4318/FFFFFF?text=Taman+Nasional" alt="Taman Nasional" class="object-cover w-full h-full hover:scale-105 transition duration-500">
+                        </a>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <span class="text-earth text-xs font-bold uppercase tracking-wide mb-2">Alam Liar</span>
+                            <h3 class="text-xl font-heading font-bold mb-2 leading-snug">
+                                <a href="#" class="hover:text-forest transition">Menjelajahi Taman Nasional Komodo: Surga Satwa Liar</a>
+                            </h3>
+                            <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-3">
+                                Laporan perjalanan menyusuri eksotisme pulau purba. Keanekaragaman hayati yang menakjubkan dan tantangan pelestariannya.
+                            </p>
+                            <span class="text-xs text-gray-500 flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                25 Oktober 2026
+                            </span>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 4 -->
+                    <article class="flex flex-col bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                        <a href="#" class="relative h-48 overflow-hidden block">
+                            <img src="https://placehold.co/600x400/8B5A2B/FFFFFF?text=Taktik+Berburu" alt="Taktik Berburu" class="object-cover w-full h-full hover:scale-105 transition duration-500">
+                        </a>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <span class="text-earth text-xs font-bold uppercase tracking-wide mb-2">Taktik</span>
+                            <h3 class="text-xl font-heading font-bold mb-2 leading-snug">
+                                <a href="#" class="hover:text-forest transition">Taktik Berburu Rusa di Musim Kemarau Dataran Tinggi</a>
+                            </h3>
+                            <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-3">
+                                Memahami pola pergerakan dan sumber air satwa di musim kering. Tips dari pakar pelacak jejak lokal yang berpengalaman.
+                            </p>
+                            <span class="text-xs text-gray-500 flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                24 Oktober 2026
+                            </span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="lg:col-span-1 space-y-8">
+                
+                <!-- Popular Articles Widget -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="border-b-4 border-earth mb-4 pb-2">
+                        <h2 class="text-xl font-heading font-bold text-stone-dark">Artikel Terpopuler</h2>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-3xl font-heading font-black text-stone-300 mr-4 leading-none">1</span>
+                            <div>
+                                <a href="#" class="font-bold text-forest hover:text-earth transition text-sm leading-tight inline-block mb-1">5 Etika Berburu yang Wajib Dipatuhi Setiap Pemburu Modern</a>
+                                <div class="text-xs text-gray-500">Oleh Budi Santoso</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-3xl font-heading font-black text-stone-300 mr-4 leading-none">2</span>
+                            <div>
+                                <a href="#" class="font-bold text-forest hover:text-earth transition text-sm leading-tight inline-block mb-1">Cara Bertahan Hidup di Hutan Tropis: Teknik Dasar Survival</a>
+                                <div class="text-xs text-gray-500">Oleh Tim Redaksi</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-3xl font-heading font-black text-stone-300 mr-4 leading-none">3</span>
+                            <div>
+                                <a href="#" class="font-bold text-forest hover:text-earth transition text-sm leading-tight inline-block mb-1">Mengenal Lebih Dekat Spesies Burung Endemik Papua Barat</a>
+                                <div class="text-xs text-gray-500">Oleh Dr. Arief Widjaya</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-3xl font-heading font-black text-stone-300 mr-4 leading-none">4</span>
+                            <div>
+                                <a href="#" class="font-bold text-forest hover:text-earth transition text-sm leading-tight inline-block mb-1">Merawat Senapan dan Alat Optik agar Awet Menghadapi Cuaca Ekstrem</a>
+                                <div class="text-xs text-gray-500">Oleh Rio Handoko</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Widget -->
+                <div class="bg-forest-light text-white p-6 rounded-lg shadow-md text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-earth" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <h3 class="text-2xl font-heading font-bold mb-2">Buletin NetNatur</h3>
+                    <p class="text-sm mb-6 text-stone-200">Dapatkan artikel terbaru seputar alam liar, tips berburu, dan update peralatan langsung di kotak masuk Anda.</p>
+                    <form class="flex flex-col space-y-3" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Alamat Email Anda" class="w-full px-4 py-2 rounded text-stone-dark focus:outline-none focus:ring-2 focus:ring-earth" required>
+                        <button type="submit" class="w-full bg-earth hover:bg-earth-dark text-white font-bold py-2 px-4 rounded transition duration-300 uppercase tracking-wider text-sm">
+                            Berlangganan
+                        </button>
+                    </form>
+                    <p class="text-xs mt-4 text-forest-dark opacity-70">Kami menghargai privasi Anda.</p>
+                </div>
+                
+                <!-- Advertisement Placeholder -->
+                <div class="bg-stone-200 h-64 rounded-lg flex items-center justify-center border border-dashed border-stone-400 text-stone-500 text-sm">
+                    Ruang Iklan (300x250)
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-forest-dark text-stone-300 py-10 mt-12 border-t-4 border-earth">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- About -->
+                <div>
+                    <a href="#" class="text-2xl font-heading font-black text-white tracking-tight mb-4 inline-block">
+                        NetNatur<span class="text-earth">ID</span>
+                    </a>
+                    <p class="text-sm leading-relaxed mb-4">
+                        Sumber informasi terpercaya bagi para pecinta alam liar, pemburu etis, dan penggemar aktivitas outdoor di Indonesia. Membawa Anda lebih dekat dengan keindahan dan tantangan alam terbuka.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-heading font-bold mb-4 uppercase tracking-wider text-sm">Navigasi</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition flex items-center"><span class="text-earth mr-2">▪</span> Beranda</a></li>
+                        <li><a href="#" class="hover:text-white transition flex items-center"><span class="text-earth mr-2">▪</span> Artikel Alam</a></li>
+                        <li><a href="#" class="hover:text-white transition flex items-center"><span class="text-earth mr-2">▪</span> Panduan Berburu</a></li>
+                        <li><a href="#" class="hover:text-white transition flex items-center"><span class="text-earth mr-2">▪</span> Ulasan Peralatan</a></li>
+                        <li><a href="#" class="hover:text-white transition flex items-center"><span class="text-earth mr-2">▪</span> Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-heading font-bold mb-4 uppercase tracking-wider text-sm">Kontak Kami</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-3 text-earth flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span>Jl. Hutan Tropis No. 99, Dalung, Kuta Utara, Bali, Indonesia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-earth flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span>redaksi@netnatur.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-stone-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2026 NetNatur ID. Hak Cipta Dilindungi Undang-Undang.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Facebook</a>
+                    <a href="#" class="hover:text-white transition">Instagram</a>
+                    <a href="#" class="hover:text-white transition">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
